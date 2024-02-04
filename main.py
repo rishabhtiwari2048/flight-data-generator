@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     for num in range(0,num_of_files):
         file_name = file_prefix+"_"+str(datetime.now()).replace(" ",'').split(".")[0].replace(":","").replace("-","")+".json"
-        with open(destination+"\\"+file_name,"w",encoding="utf-8") as file:
+        with open(destination+"/"+file_name,"w",encoding="utf-8") as file:
             for record in range(0,record_count):
                 flight_booking = fake.flight()
                 json.dump(flight_booking,file,ensure_ascii=False)
